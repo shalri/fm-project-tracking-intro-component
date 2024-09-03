@@ -17,17 +17,18 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-10 bg-black/80"
+            className="fixed inset-0 z-10 bg-black/10 backdrop-blur-sm"
           />
         )}
       </AnimatePresence>
       <div className="container mx-auto flex items-center justify-between px-8">
         <Link href="/">
-          <div className="relative size-6">
+          <div className="relative z-10 size-6">
             <Image
               src="/images/logo.svg"
               alt="logo"
               fill
+              priority
               className="object-contain"
             />
           </div>
