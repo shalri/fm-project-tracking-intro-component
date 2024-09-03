@@ -3,19 +3,19 @@ import Image from "next/image";
 
 export default function Intro() {
   return (
-    <main className="">
-      <div className=" flex w-full flex-col items-center justify-center text-center">
-        <div className="relative h-[400px] w-full">
+    <main className="z-10 overflow-hidden">
+      <div className="z-10 mt-[58px] h-[245px] w-[140%]">
+        <div className="relative h-[calc(100vw*0.65)] md:h-[calc(100vw*0.4)] lg:h-[calc(100vw*0.3)]">
           <Image
             src="/images/illustration-devices.svg"
             fill
-            className="object-contain"
+            className="right-0 object-contain"
             alt="devices"
           />
         </div>
       </div>
 
-      <section className="">
+      <section className="px-8">
         <div className="">
           <div className="">{details.status}</div>
           <div className="">{details.category}</div>

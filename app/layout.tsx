@@ -5,8 +5,9 @@ import "./globals.css";
 const barlow = Barlow({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  title: "次に(tsugini) | FScode",
-  description: "A basic NextJS template for Frontend Mentor Challenges",
+  title: "Project Tracking Intro Component| FScode",
+  description:
+    "Solution for Project Tracking Intro Component challenge from Frontend Mentor",
 };
 
 export default function RootLayout({
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body
         className={`${barlow.className} flex min-h-screen flex-col scroll-smooth text-[18px] antialiased`}
       >
+        <div className="hi-[64%] fixed right-0 h-[425px] w-[50%] rounded-bl-[60px] bg-pt-light-grayish-blue" />
         {children}
       </body>
     </html>
