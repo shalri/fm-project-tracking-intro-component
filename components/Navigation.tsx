@@ -1,11 +1,11 @@
-"use client";
+// "use client";
 
 import { useSmallScreen } from "@/hooks/useSmallScreen";
 import { pages } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 interface NavigationProps {
   isMobileNavActive: boolean;
@@ -55,7 +55,7 @@ export default function Navigation({
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
-              className="mobile-nav fixed left-6 right-6 top-6 z-20 mt-16"
+              className="mobile-nav fixed left-8 right-8 top-9 z-20 mt-16"
             >
               {children}
             </motion.div>
@@ -67,9 +67,18 @@ export default function Navigation({
   );
 
   const navContent = (
-    <ul className="absolute z-20 w-full bg-red-500">
+    <ul
+      className={cn(
+        "font-barlow-condensed font-bold uppercase",
+        isMobileNavActive &&
+        "absolute z-20 flex w-full flex-col gap-y-4 rounded-md bg-white py-5 text-center text-[20px] shadow-xl shadow-black/30",
+      )}
+    >
       {pages.map((page) => (
-        <li className="" key={page.title}>
+        <li
+          className="text-pt-very-dark-blue last:mx-6 last:mt-1 last:border-t last:border-pt-light-grayish-blue last:pt-5 last:text-pt-grayish-blue"
+          key={page.title}
+        >
           <Link href={page.url}>{page.title}</Link>
         </li>
       ))}

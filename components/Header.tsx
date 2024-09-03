@@ -7,7 +7,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
-  const [isMobileNavActive, setIsMobileNavActive] = useState(false);
+  const [isMobileNavActive, setIsMobileNavActive] = useState(true);
 
   return (
     <header className="w-full overflow-hidden pt-[38px]">
