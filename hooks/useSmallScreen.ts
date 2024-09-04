@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-export function useSmallScreen(breakpoint: number = 768) {
+export function useSmallScreen(breakpoint: number = 640) {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {

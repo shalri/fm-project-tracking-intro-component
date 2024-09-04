@@ -69,17 +69,27 @@ export default function Navigation({
   const navContent = (
     <ul
       className={cn(
-        "font-barlow-condensed font-bold uppercase",
+        "flex font-barlow-condensed font-bold uppercase tracking-wider sm:gap-x-10 sm:text-[16px]",
         isMobileNavActive &&
-        "absolute z-20 flex w-full flex-col gap-y-4 rounded-md bg-white py-5 text-center text-[20px] shadow-xl shadow-black/30",
+        "absolute z-20 w-full flex-col gap-y-4 rounded-md bg-white py-5 text-center text-[20px] shadow-xl shadow-black/30",
       )}
     >
-      {pages.map((page) => (
+      {pages.map((page, index) => (
         <li
-          className="text-pt-very-dark-blue last:mx-6 last:mt-1 last:border-t last:border-pt-light-grayish-blue last:pt-5 last:text-pt-grayish-blue"
+          className={cn(
+            "text-pt-very-dark-blue sm:flex sm:items-center",
+            index === pages.length - 1
+              ? "last:mx-6 last:mt-1 last:border-t last:border-pt-light-grayish-blue last:pt-5 last:text-pt-grayish-blue sm:last:mx-0 sm:last:mt-0 sm:last:border-0 sm:last:pt-0"
+              : "",
+          )}
           key={page.title}
         >
           <Link href={page.url}>{page.title}</Link>
+          {index === pages.length - 2 && (
+            <span className="hidden size-2 pl-10 pr-2 pt-[2px] text-[30px] leading-[0] text-pt-grayish-blue sm:inline-block">
+              &middot;
+            </span>
+          )}
         </li>
       ))}
     </ul>

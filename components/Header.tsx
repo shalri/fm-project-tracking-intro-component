@@ -7,10 +7,10 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
-  const [isMobileNavActive, setIsMobileNavActive] = useState(true);
+  const [isMobileNavActive, setIsMobileNavActive] = useState(false);
 
   return (
-    <header className="w-full overflow-hidden pt-[38px]">
+    <header className="mx-auto w-full overflow-hidden pt-[38px] sm:max-w-[1174px] sm:pt-16">
       <AnimatePresence>
         {isMobileNavActive && (
           <motion.div
@@ -21,9 +21,9 @@ export default function Header() {
           />
         )}
       </AnimatePresence>
-      <div className="container mx-auto flex items-center justify-between px-8">
+      <div className="mx-auto flex items-center justify-between px-8">
         <Link href="/">
-          <div className="relative z-10 size-6">
+          <div className="relative z-10 size-6 sm:size-8">
             <Image
               src="/images/logo.svg"
               alt="logo"
