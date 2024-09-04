@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${barlow.className} flex min-h-screen flex-col scroll-smooth text-[18px] antialiased`}
+        className={`${barlow.className} max-w-screen flex min-h-screen flex-col overflow-x-hidden scroll-smooth text-[18px] antialiased`}
       >
-        <div className="hi-[64%] absolute right-0 h-[425px] w-[50%] rounded-bl-[60px] bg-pt-light-grayish-blue" />
+        <div className="hi-[64%] absolute right-0 h-[425px] w-[50%] rounded-bl-[60px] bg-pt-light-grayish-blue sm:w-[49%]" />
         {children}
       </body>
     </html>
