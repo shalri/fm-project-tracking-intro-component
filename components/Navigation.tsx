@@ -1,5 +1,3 @@
-// "use client";
-
 import { useSmallScreen } from "@/hooks/useSmallScreen";
 import { pages } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -113,7 +111,9 @@ export default function Navigation({
         <div
           className={cn(
             "block h-4 w-6 bg-[url(/fm-project-tracking-intro-component/images/icon-hamburger.svg)] bg-no-repeat sm:hidden",
-            isMobileNavActive ? "h-6 bg-[url(/fm-project-tracking-intro-component/images/icon-close.svg)]" : "",
+            isMobileNavActive
+              ? "h-6 bg-[url(/fm-project-tracking-intro-component/images/icon-close.svg)]"
+              : "",
           )}
         />
       </button>
