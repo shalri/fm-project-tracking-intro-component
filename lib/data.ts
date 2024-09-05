@@ -1,19 +1,19 @@
 export const pages = [
   {
     title: "Product",
-    url: "#",
+    url: "/",
   },
   {
     title: "Features",
-    url: "#",
+    url: "/",
   },
   {
     title: "Pricing",
-    url: "#",
+    url: "/",
   },
   {
     title: "Login",
-    url: "#",
+    url: "/",
   },
 ];
 

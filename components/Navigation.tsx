@@ -23,6 +23,12 @@ export default function Navigation({
     setIsMobileNavActive((prev) => !prev);
   }, [setIsMobileNavActive]);
 
+  const handleLinkClick = useCallback(() => {
+    if (isSmallScreen) {
+      setIsMobileNavActive(false);
+    }
+  }, [isSmallScreen, setIsMobileNavActive]);
+
   useEffect(() => {
     const handleClickOutsideNav = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -77,14 +83,20 @@ export default function Navigation({
       {pages.map((page, index) => (
         <li
           className={cn(
-            "text-pt-very-dark-blue sm:flex sm:items-center",
+            "sm:underline-animation text-pt-very-dark-blue sm:flex sm:items-center",
             index === pages.length - 1
-              ? "last:mx-6 last:mt-1 last:border-t last:border-pt-light-grayish-blue last:pt-5 last:text-pt-grayish-blue sm:last:mx-0 sm:last:mt-0 sm:last:border-0 sm:last:pt-0"
+              ? "transition-colors duration-300 last:mx-6 last:mt-1 last:border-t last:border-pt-light-grayish-blue last:pt-5 last:text-pt-grayish-blue hover:text-pt-red sm:last:mx-0 sm:last:mt-0 sm:last:border-0 sm:last:pt-0"
               : "",
           )}
           key={page.title}
         >
-          <Link href={page.url}>{page.title}</Link>
+          <Link
+            href={page.url}
+            className="underline-animation"
+            onClick={handleLinkClick}
+          >
+            {page.title}
+          </Link>
           {index === pages.length - 2 && (
             <span className="hidden size-2 pl-10 pr-2 pt-[2px] text-[30px] leading-[0] text-pt-grayish-blue sm:inline-block">
               &middot;

@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Intro() {
   return (
     <main className="overflow-hidden sm:mx-auto sm:mt-[58px] sm:grid sm:max-w-[1174] sm:grid-cols-2 sm:items-center sm:overflow-visible">
-      <div className="relative mb-[86px] mt-[58px] h-[245px] w-[140%] sm:col-start-2 sm:mb-0 sm:mt-0 sm:h-auto sm:w-[168.5%] sm:pl-8">
-        <div className="relative h-[calc(100vw*0.65)] max-h-[300px] sm:max-h-[575px]">
+      <div className="relative mb-[86px] mt-[58px] h-[245px] w-[140%] sm:col-start-2 sm:mb-0 sm:mt-0 sm:h-auto sm:w-[168.5%] sm:pl-[28px]">
+        <div className="relative h-[calc(100vw*0.65)] max-h-[300px] sm:max-h-[578px]">
           <Image
             src="/images/illustration-devices.svg"
             fill
@@ -34,10 +34,10 @@ export default function Intro() {
         </div>
 
         <div className="mb-[84px] mt-6 flex items-center gap-x-5 uppercase sm:mb-0 sm:mt-[60px] sm:gap-x-6">
-          <div className="rounded-md bg-pt-red px-[25px] py-[10px] font-barlow-condensed text-[14px] font-bold tracking-[0.066em] text-white sm:flex-shrink-0 sm:px-8 sm:py-[14px] sm:text-[16px]">
+          <div className="cursor-pointer rounded-md bg-pt-red px-[25px] py-[10px] font-barlow-condensed text-[14px] font-bold tracking-[0.066em] text-white transition-colors duration-300 peer hover:bg-pt-red/80 sm:flex-shrink-0 sm:px-8 sm:py-[14px] sm:text-[16px]">
             Schedule a demo
           </div>
-          <div className="font-barlow-condensed text-[14px] font-normal tracking-[0.180em] text-pt-grayish-blue sm:flex-shrink-0 sm:tracking-[0.380em]">
+          <div className="font-barlow-condensed text-[14px] font-normal tracking-[0.180em] text-pt-grayish-blue transition-colors duration-300 peer-hover:text-pt-very-dark-blue sm:flex-shrink-0 sm:tracking-[0.380em]">
             To see a preview
           </div>
         </div>

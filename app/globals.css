@@ -7,3 +7,16 @@
 .no-scroll {
   overflow: hidden;
 }
+
+.underline-animation {
+  @apply relative inline-block;
+}
+
+.underline-animation::after {
+  @apply absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-pt-very-dark-blue transition-transform duration-300;
+  content: "";
+}
+
+.underline-animation:hover::after {
+  @apply scale-x-100;
+}
