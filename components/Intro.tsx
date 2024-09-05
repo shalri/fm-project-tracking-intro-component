@@ -7,7 +7,7 @@ export default function Intro() {
       <div className="relative mb-[86px] mt-[58px] h-[245px] w-[140%] sm:col-start-2 sm:mb-0 sm:mt-0 sm:h-auto sm:w-[168.5%] sm:pl-[28px]">
         <div className="relative h-[calc(100vw*0.65)] max-h-[300px] sm:max-h-[578px]">
           <Image
-            src="/images/illustration-devices.svg"
+            src="/fm-project-tracking-intro-component/illustration-devices.svg"
             fill
             className="right-0 object-contain"
             alt="devices"
