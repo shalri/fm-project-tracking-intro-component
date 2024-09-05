@@ -107,7 +107,13 @@ export default function Navigation({
 
   return (
     <nav ref={navRef} className="z-10">
-      <button className="flex items-center" onClick={hamburgerClick}>
+      <button
+        className="flex items-center"
+        onClick={hamburgerClick}
+        aria-label={isMobileNavActive ? "Close Navigation" : "Open Navigation"}
+        aria-controls="naviagation"
+        aria-expanded={isMobileNavActive}
+      >
         <div
           className={cn(
             "block h-4 w-6 bg-[url(/fm-project-tracking-intro-component/images/icon-hamburger.svg)] bg-no-repeat sm:hidden",

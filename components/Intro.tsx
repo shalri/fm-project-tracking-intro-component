@@ -20,14 +20,14 @@ export default function Intro() {
           <div className="rounded-full bg-pt-very-dark-blue px-[10px] py-[1px] text-[16px] font-bold tracking-wider text-white">
             {details.status}
           </div>
-          <div className="text-[16px] tracking-[0.280em] text-pt-grayish-blue">
+          <h2 className="text-[16px] tracking-[0.280em] text-pt-grayish-blue">
             {details.category}
-          </div>
+          </h2>
         </div>
         <div className="mt-4">
-          <div className="font-barlow-condensed text-[40px] font-bold uppercase leading-[1] text-pt-very-dark-blue sm:text-[64px]">
+          <h1 className="font-barlow-condensed text-[40px] font-bold uppercase leading-[1] text-pt-very-dark-blue sm:text-[64px]">
             {details.header}
-          </div>
+          </h1>
           <div className="mt-4 max-w-[280px] text-pt-dark-grayish-blue sm:mt-8">
             {details.description}
           </div>
