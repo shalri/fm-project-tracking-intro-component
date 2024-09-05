@@ -112,8 +112,8 @@ export default function Navigation({
       <button className="flex items-center" onClick={hamburgerClick}>
         <div
           className={cn(
-            "block h-4 w-6 bg-[url(/fm-project-tracking-intro-component/icon-hamburger.svg)] bg-no-repeat sm:hidden",
-            isMobileNavActive ? "h-6 bg-[url(/fm-project-tracking-intro-component/icon-close.svg)]" : "",
+            "block h-4 w-6 bg-[url(/fm-project-tracking-intro-component/images/icon-hamburger.svg)] bg-no-repeat sm:hidden",
+            isMobileNavActive ? "h-6 bg-[url(/fm-project-tracking-intro-component/images/icon-close.svg)]" : "",
           )}
         />
       </button>

@@ -25,7 +25,7 @@ export default function Header() {
         <Link href="/">
           <div className="relative z-10 size-6 sm:size-8">
             <Image
-              src="/fm-project-tracking-intro-component/logo.svg"
+              src="/fm-project-tracking-intro-component/images/logo.svg"
               alt="logo"
               fill
               priority
